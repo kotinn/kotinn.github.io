@@ -1,2 +1,2 @@
 # dyplom-old
-jquery, js, html, css
+jquery, ajax, js, html, css
