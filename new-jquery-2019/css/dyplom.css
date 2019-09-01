@@ -4,11 +4,11 @@
 }
 
 .left-eye {
-  background-image: url(/img/left-bg-white.jpg);
+  background-image: url(../img/left-bg-white.jpg);
   height: 670px;
 }
 .right-eye {
-  background-image: url(/img/right-bg-white.jpg);
+  background-image: url(../img/right-bg-white.jpg);
   height: 670px;
 }
 

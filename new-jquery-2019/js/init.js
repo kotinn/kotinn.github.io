@@ -1,6 +1,10 @@
 var obrazek; //obrazek dla apki
 //Siatkowka 3D
+let divObrazki = []; //src do obrazkow
+let iloscObrazkow = 0;
+
 console.log("zmienna");
+
 //************************************************************************wybor obrazka new
 setTimeout(
   $(".form-check-button").click(function() {
@@ -37,3 +41,34 @@ function okokrok(imag) {
 
   console.log("Krok 1. Wybrano obrazek: " + obrazek);
 }
+
+//ustaw wyjatek dla obrazkow localhost or web page !
+
+for (let i = 1; i < 50; i++) {
+  if (doesFileExist("..img/" + i + ".jpg")) {
+    i--;
+    divObrazki[i] = toString("..img/" + i + ".jpg");
+    i++;
+  } else {
+    iloscObrazkow = i - 1;
+    console.log(iloscObrazkow);
+    i = 50;
+  }
+}
+
+
+function doesFileExist(urlToFile) {
+  var xhr = new XMLHttpRequest();
+  xhr.open("HEAD", urlToFile, false);
+  xhr.send();
+
+  if (xhr.status == "404") {
+    console.log("Obrazki do=  " + urlToFile);
+    return false;
+  } else {
+    // console.log("File exists " + urlToFile);
+    return true;
+  }
+}
+
+console.log("ku" + wszystkieObrazki[0]);
