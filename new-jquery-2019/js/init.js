@@ -45,9 +45,9 @@ function okokrok(imag) {
 //ustaw wyjatek dla obrazkow localhost or web page !
 
 for (let i = 1; i < 50; i++) {
-  if (doesFileExist("..img/" + i + ".jpg")) {
+  if (doesFileExist("/img/" + i + ".jpg")) {
     i--;
-    divObrazki[i] = toString("..img/" + i + ".jpg");
+    divObrazki[i] = toString("/img/" + i + ".jpg");
     i++;
   } else {
     iloscObrazkow = i - 1;
@@ -55,7 +55,6 @@ for (let i = 1; i < 50; i++) {
     i = 50;
   }
 }
-
 
 function doesFileExist(urlToFile) {
   var xhr = new XMLHttpRequest();
