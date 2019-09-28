@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="src/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="src/main.css" />
+
+    <title>Mini BG generator</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark fixed-scroll">
+      <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">BG animation</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://kotinn.github.io"
+              >kotinn.github.io</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="outer-wrap">
+      <div id="wrap">
+        <div id="inner-wrap">
+          <div class="container mt-4 mb-4">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="container-fluid bg-light pt-2 pb-2">
+                  <h5>Animation</h5>
+                  <p>Layer 1</p>
+                  <hr />
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-fluid bg-light pt-2 pb-2">
+                  <h5>Gradient/Mid layer</h5>
+                  <p>Layer 2</p>
+                  <hr />
+                  <form>
+                    <div class="custom-control custom-switch">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="switch1"
+                        name="example"
+                      />
+                      <label class="custom-control-label" for="switch1"
+                        >Toggle me</label
+                      >
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="container-fluid bg-light pt-2 pb-2 mb-2">
+                  <h5>img</h5>
+                  <p>output</p>
+                </div>
+                <div class="container-fluid bg-light pt-2 pb-2 mb-2">
+                  <h5>Paters/Images</h5>
+                  <p>Layer 3</p>
+                </div>
+                <div class="container-fluid bg-light pt-2 pb-2 mb-2">
+                  <h5>Paters/Images</h5>
+                  <p>Layer 3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer mb-0 .fixed-bottom p-2 bg-light">
+      <div class="container">
+        <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>
