@@ -107,9 +107,33 @@ $(function() {
 /* Sorting images ends */
 
 /*  Side Menu*/
-$(document).ready(function() {
+$(function() {
   /* $(".menuDiv").hide();*/
-  $(".menuBtn").click(function() {
-    $(".menuDiv").toggle("slide", { direction: "right" });
+  $(".navbar-toggler").click(function() {
+    if (this.value == "false") {
+      this.value = true;
+      $(".navbar-toggler")
+        .addClass("closemenu")
+        .removeClass("openmenu");
+      moveMenu(-320, 0);
+      //  console.log("false");
+    } else {
+      this.value = false;
+      $(".navbar-toggler")
+        .removeClass("closemenu")
+        .addClass("openmenu");
+      moveMenu(0, -300);
+      // console.log("true");
+    }
   });
+
+  function moveMenu(paramMenu, paramWrap) {
+    $(".menuDiv").animate({
+      right: paramMenu + "px",
+      opacity: "1"
+    });
+    $("#content").animate({
+      margin: "0px 0px 0px " + paramWrap + "px"
+    });
+  }
 });

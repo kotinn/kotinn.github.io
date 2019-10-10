@@ -49,7 +49,7 @@
 
 .menuDiv {
   position: fixed;
-  right: 0;
+  right: -300px;
   height: calc( 100vh - 40px);
   width: 20%;
   background-color: #99CCFF;
@@ -97,4 +97,86 @@
     padding-left: 1.1rem;
     padding-right: 1.1rem;
   }
+}
+
+.c-hamburger {
+  color: white;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+  height: 20px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background .3s;
+  top: 10px;
+}
+
+.navbar-toggler {
+  background: none;
+}
+
+/* hamburger classes and animation */
+.navbar-toggler {
+  display: block !important;
+  cursor: pointer;
+  position: relative;
+  width: 2.5rem;
+  height: 2rem;
+  padding: .5rem .75rem;
+  font-size: 1.25rem;
+  line-height: 1rem;
+  border-radius: .25rem;
+}
+
+.navbar-toggler span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background: #55595c;
+  border-radius: 3px;
+  opacity: 1;
+  left: 25%;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.navbar-toggler span:nth-child(1) {
+  top: 34.5%;
+}
+
+.navbar-toggler span:nth-child(2), .navbar-toggler span:nth-child(3) {
+  top: 50%;
+}
+
+.navbar-toggler span:nth-child(4) {
+  top: 65.5%;
+}
+
+.navbar-toggler.openmenu span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.navbar-toggler.openmenu span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler.openmenu span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.navbar-toggler.openmenu span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
 }
