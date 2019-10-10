@@ -10,7 +10,10 @@
 
 #main-mid-bg {
   width: calc(100vw - 60px);
-  margin: 0 40px 20px 20px;
+  margin: 0 40px 0px 20px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: linear-gradient(0deg, #dcdedc, #343434);
 }
 
 .bord {
@@ -47,14 +50,14 @@
 .menuDiv {
   position: fixed;
   right: 0;
-  height: calc(100vh-40px);
+  height: calc( 100vh - 40px);
   width: 20%;
-  background-color: #99ccff;
+  background-color: #99CCFF;
   padding: 20px;
   margin-right: 23px;
   margin-top: 0px;
-  border-bottom: 5px solid #3399ff;
-  border-top: 5px solid #3399ff;
+  border-bottom: 5px solid #3399FF;
+  border-top: 5px solid #3399FF;
   z-index: 2000;
 }
 
