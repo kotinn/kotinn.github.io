@@ -115,7 +115,7 @@ $(function() {
       $(".navbar-toggler")
         .addClass("closemenu")
         .removeClass("openmenu");
-      moveMenu(-320, 0);
+      moveMenu(-300, 0);
       //  console.log("false");
     } else {
       this.value = false;
