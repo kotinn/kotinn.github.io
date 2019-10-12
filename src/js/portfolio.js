@@ -5,6 +5,7 @@ $(document).ready(function($) {
     '[data-toggle="lightbox"]:not([data-gallery="navigateTo"]):not([data-gallery="example-gallery-11"])',
     function(event) {
       event.preventDefault();
+      closeMenu();
       return $(this).ekkoLightbox();
     }
   );
@@ -82,6 +83,42 @@ $(document).ready(function($) {
     text = text.join("\n");
     $code.html(text).show();
   });
+
+  /*  Side Menu*/
+
+  /* $(".menuDiv").hide();*/
+  $(".navbar-toggler").click(function() {
+    if (this.value == "false") {
+      //this.value = true;
+      closeMenu();
+      //  console.log("false");
+    } else {
+      this.value = false;
+      $(".navbar-toggler")
+        .removeClass("closemenu")
+        .addClass("openmenu");
+      moveMenu(0, -300);
+      // console.log("true");
+    }
+  });
+
+  function closeMenu() {
+    $(".navbar-toggler").attr("value", "true");
+    $(".navbar-toggler")
+      .addClass("closemenu")
+      .removeClass("openmenu");
+    moveMenu(-300, 0);
+  }
+
+  function moveMenu(paramMenu, paramWrap) {
+    $(".menuDiv").animate({
+      right: paramMenu + "px",
+      opacity: "1"
+    });
+    $("#content").animate({
+      margin: "0px " + -paramWrap + "px 0px " + paramWrap + "px"
+    });
+  }
 });
 
 /*Sorting images  */
@@ -105,35 +142,3 @@ $(function() {
 });
 
 /* Sorting images ends */
-
-/*  Side Menu*/
-$(function() {
-  /* $(".menuDiv").hide();*/
-  $(".navbar-toggler").click(function() {
-    if (this.value == "false") {
-      this.value = true;
-      $(".navbar-toggler")
-        .addClass("closemenu")
-        .removeClass("openmenu");
-      moveMenu(-300, 0);
-      //  console.log("false");
-    } else {
-      this.value = false;
-      $(".navbar-toggler")
-        .removeClass("closemenu")
-        .addClass("openmenu");
-      moveMenu(0, -300);
-      // console.log("true");
-    }
-  });
-
-  function moveMenu(paramMenu, paramWrap) {
-    $(".menuDiv").animate({
-      right: paramMenu + "px",
-      opacity: "1"
-    });
-    $("#content").animate({
-      margin: "0px 0px 0px " + paramWrap + "px"
-    });
-  }
-});
