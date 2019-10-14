@@ -12,6 +12,8 @@
  padding-top: 1.5rem
  padding-bottom: 1.5rem
  background: linear-gradient(0deg, rgb(220, 222, 220),rgb(52, 52, 52))
+ .container
+  margin-top: -80vh
 
 .bord
  z-index: 3000
@@ -51,27 +53,44 @@
  height: calc( 100vh - 40px )
  width: 300px
  background-color: #232323;
- padding: 20px
+ padding: 0px
  margin-right: 20px
  margin-top: 0px
  border-bottom: 5px solid #3399FF
  border-top: 5px solid #3399FF
  z-index: 2000
 
-
-.grid-menu
+.menuFlex
+ display: flex
+ align-items: center
  color: white
- display: grid
- grid-template-columns: auto
- grid-gap: 10px
  height: 100%
  .menu-mid
-  align-self: end
+  padding: 0 20px
   height: 300px
+  width: 100%
  .menu-social
+  position: fixed
+  border-top: solid 1px rgba(200, 200, 200, 0.3);
+  bottom: 20px
+  margin-bottom: 0
   height: 100px
   width: 100%
-  align-self: end
+
+.sh-nav-mobile
+ list-style-type: none
+ padding-inline-start: 0px
+ li 
+  padding: 10px 0
+  border-bottom: solid 1px rgba(200, 200, 200, 0.3);
+  &:nth-last-child(1)
+   border-bottom: none
+.menu-item a
+ color: white
+ &:hover
+  color: gray 
+  text-decoration: none
+
 
 .btnPortfolio
  bottom: 0
